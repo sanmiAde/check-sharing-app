@@ -50,8 +50,12 @@ struct ContentView: View {
                     }.pickerStyle(SegmentedPickerStyle())
                 }
                 
-                Section {
+                Section(header: Text("Amount per person")) {
                     Text("\(totalPerPerson, specifier: "%.2f")")
+                }
+                
+                Section(header: Text("Total amount")) {
+                    Text("\(grandTotal, specifier: "%.2f")")
                 }
             }
             .navigationBarTitle("WeSplit")
